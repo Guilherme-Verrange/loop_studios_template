@@ -1,55 +1,99 @@
-@import "variables";
-
+@import 'variables';
+@import 'responsive';
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+}
+
+body{
+
     font-size: 15px;
+
 }
 
 
-.hero {
+.navbar{
 
-    background-image: url(/images/desktop/image-hero.jpg);
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
-    height: 100vh;
+    margin-top: 50px;
+    padding: 10px 0;
 
-    header {
-        position: absolute;
-        width: 100%;
-        padding: 100px 0;
-        background-color: transparent;
+    ul{
         display: flex;
-        align-items: center;
-        justify-content: space-around;
+        list-style: none;
+        gap: 30px;
 
-        ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
+        a{
+            text-decoration: none;
+            color: $White;
+            font-family: $Font-Josefin;
+            font-weight: 300;
+            font-size: 1.10rem;
+            padding: 5px 0;
 
-            li {
-
-                a {
-                    color: $White;
-                    font-family: $Font-Josefin;
-                    font-weight: 300;
-                    text-decoration: none;
-                    font-size: 1.2rem;
-                }
+            &:hover{
+                border-bottom: 2px solid white;
             }
         }
+    }
 
-        .toggle-nav{
-            display: none;
-        }
+    .toggle-nav{
+
+        display: none;
+
     }
 }
 
-.asd{
+.hero{
 
+    background-image: url(/images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100vh;
-    background-color: orange;
+    filter: brightness(70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+    .content{
+
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: start;
+        width: 80%;
+        padding: 20px;
+        height: 300px;
+      
+    }
+
+    .hero-text{
+
+        width: 50%;
+        border: 2px solid $White;
+        padding: 25px;
+        
+        h1{
+            position: relative;
+            text-transform: uppercase;
+            font-size: 4vw;
+            font-family: $Font-Josefin;
+            font-weight: 300;
+            color: $White;
+        }
+
+
+    }
+    
 }
