@@ -27,10 +27,9 @@
             display: none;
         }
 
-        .toggle-nav{
-            display: flex;
+        #toggle-nav{
+            display: block !important;
         }
-
     }
 
 }
